@@ -3,11 +3,11 @@ console.log("My gallery is awesome");
 let images = [
   {
     src: "./images/surly1.jpg",
-    alt: "an orange fat bike",
+    alt: "an orange bike",
   },
   {
     src: "./images/surly2.jpg",
-    alt: "a bike-packing bike",
+    alt: "a bike with storage",
   },
   {
     src: "./images/surly3.jpg",
@@ -15,11 +15,11 @@ let images = [
   },
   {
     src: "./images/surly4.jpg",
-    alt: "green bike in a forest",
+    alt: "green bike",
   },
   {
     src: "./images/surly5.jpg",
-    alt: "green bike in a forest",
+    alt: "brown bike in desert",
   },
 ];
 
@@ -43,4 +43,26 @@ images.forEach(function (individualImage) {
   });
 
   thumbnailContainer.appendChild(myNewImg);
+});
+
+let currentIndex = 0;
+
+function showImage(index) {
+  mainBackgroundContainer.innerHTML = "";
+  const image = document.createElement("img");
+  image.src = images[index].src;
+  image.alt = images[index].alt;
+  mainBackgroundContainer.appendChild(image);
+}
+
+// Left arrow button
+document.getElementById("leftArrow").addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+});
+
+// Right arrow button
+document.getElementById("rightArrow").addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
 });

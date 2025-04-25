@@ -8,14 +8,21 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <h2>Gallery</h2>
-    <h3>With images of bikes</h3>
+    <h2>Image Gallery</h2>
+    <h3>With a selection bikes</h3>
 
-    <div
-      id="backgroundImageContainer"
-      class="background-image-container"
-      aria-label="chosen image"
-    ></div>
+    <div class="main-image-wrapper" aria-label="Chosen image">
+      <button id="leftArrow" class="side-arrow" aria-label="Previous image">
+        ❮
+      </button>
+      <div
+        id="backgroundImageContainer"
+        class="background-image-container"
+      ></div>
+      <button id="rightArrow" class="side-arrow" aria-label="Next image">
+        ❯
+      </button>
+    </div>
 
     <div class="thumbnail-nav">
       <button id="prevBtn" class="nav-btn" aria-label="Scroll left">❮</button>

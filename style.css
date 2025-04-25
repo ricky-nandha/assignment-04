@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   text-align: center;
   padding: 1rem;
+  background-color: #7fdb9a;
 }
 
 h2,
@@ -65,4 +66,22 @@ h3 {
   .background-image-container img {
     width: 95%;
   }
+}
+
+.main-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 1rem;
+}
+
+.side-arrow {
+  font-size: 2rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
